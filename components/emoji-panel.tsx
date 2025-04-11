@@ -348,7 +348,7 @@ const EmojiPanel = forwardRef<HTMLDivElement, EmojiPanelProps>(
           data-index={virtualRow.index}
           ref={virtualRow.measureRef}
           className={cn(
-            "grid gap-1",
+            "grid gap-1 z-50",
             activeTab === "emoji" ? "grid-cols-8 sm:grid-cols-8" : "grid-cols-3 sm:grid-cols-4",
           )}
           style={{
