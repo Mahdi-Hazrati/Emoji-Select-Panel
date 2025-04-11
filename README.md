@@ -1,4 +1,4 @@
-# Telegram-Style Emoji Panel
+# Telegram-Style Emoji Select Panel
 
 A high-performance, production-ready emoji panel component that supports emojis, GIFs, and animated stickers with virtualized rendering for optimal performance.
 
@@ -15,16 +15,16 @@ A high-performance, production-ready emoji panel component that supports emojis,
 
 ## Installation
 
-\`\`\`bash
-npm install telegram-emoji-panel
+```bash
+npm install emoji-select-panel
 # or
-yarn add telegram-emoji-panel
-\`\`\`
+yarn add emoji-select-panel
+```
 
 ## Basic Usage
 
-\`\`\`jsx
-import { EmojiPanel } from 'telegram-emoji-panel'
+```jsx
+import { EmojiPanel } from 'emoji-select-panel'
 
 function ChatInput() {
   const handleEmojiSelect = (item) => {
@@ -39,12 +39,12 @@ function ChatInput() {
     </div>
   )
 }
-\`\`\`
+```
 
 ## Advanced Usage
 
-\`\`\`jsx
-import { EmojiPanel } from 'telegram-emoji-panel'
+```jsx
+import { EmojiPanel } from 'emoji-select-panel'
 import { SmileIcon } from 'your-icon-library'
 
 function CustomEmojiPanel() {
@@ -70,7 +70,7 @@ function CustomEmojiPanel() {
     />
   )
 }
-\`\`\`
+```
 
 ## Props API
 
@@ -121,7 +121,7 @@ This component follows Telegram's code style principles:
 
 ### Custom Emoji Data
 
-\`\`\`jsx
+```jsx
 const myEmojiData = {
   recent: ["😀", "😁", "😂"],
   custom: ["🚀", "💻", "🔥", "✨"],
@@ -129,11 +129,11 @@ const myEmojiData = {
 }
 
 <EmojiPanel emojiData={myEmojiData} />
-\`\`\`
+```
 
 ### Custom Categories
 
-\`\`\`jsx
+```jsx
 import { Rocket, Code, Fire } from 'your-icon-library'
 
 const myCategories = [
@@ -143,11 +143,11 @@ const myCategories = [
 ]
 
 <EmojiPanel emojiCategories={myCategories} />
-\`\`\`
+```
 
 ### Custom API Integration
 
-\`\`\`jsx
+```jsx
 const fetchFromMyApi = async (type, category, query) => {
   const response = await fetch(`/api/media?type=${type}&category=${category}&q=${query}`)
   const data = await response.json()
@@ -162,5 +162,5 @@ const fetchFromMyApi = async (type, category, query) => {
 }
 
 <EmojiPanel fetchItems={fetchFromMyApi} />
-\`\`\`
+```
 
