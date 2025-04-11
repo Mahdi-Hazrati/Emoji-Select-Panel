@@ -6,7 +6,7 @@ import { Smile, Rocket, Settings, Search, Image, Star } from "lucide-react"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-50 flex flex-col">
+    <main className="w-full min-h-screen bg-gray-50 flex flex-col">
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-white to-gray-100 py-16 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -90,17 +90,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-
-
-      {/* Footer */}
-      <footer className="text-center py-10 border-t mt-auto text-sm text-gray-500">
-        Another OSS project by{" "}
-        <a href="https://mahdi.is-a.dev" className="text-blue-500 hover:underline">
-          Mahdi Hazrati
-        </a>{" "}
-        — 2025
-      </footer>
     </main>
+
   )
 }

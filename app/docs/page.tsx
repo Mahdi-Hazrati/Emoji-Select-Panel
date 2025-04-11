@@ -1,15 +1,16 @@
 "use client"
-import { useState } from "react"
+import CallToAction from "@/components/CTA";
+import { useState } from "react";
 
 const CodeBlock = ({ code }: { code: string }) => {
-  const [copied, setCopied] = useState(false)
+  const [copied, setCopied] = useState(false);
 
   const copyToClipboard = async () => {
-    await navigator.clipboard.writeText(code)
-    setCopied(true)
+    await navigator.clipboard.writeText(code);
+    setCopied(true);
 
-    setTimeout(() => setCopied(false), 1500)
-  }
+    setTimeout(() => setCopied(false), 1500);
+  };
 
   return (
     <div className="relative bg-gray-800 text-white rounded-lg p-4 my-6 text-sm font-mono">
@@ -21,19 +22,18 @@ const CodeBlock = ({ code }: { code: string }) => {
         {copied ? "Copied" : "Copy"}
       </button>
     </div>
-  )
-}
+  );
+};
 
 const DocsPage = () => {
   return (
     <div className="max-w-4xl mx-auto p-6 text-gray-900">
       <h1 className="text-4xl font-bold mb-8">📙 Emoji Select Panel Documentation</h1>
-
       <section className="mb-10">
         <p className="text-lg mb-4">
           The Emoji Select Panel is a high-performance, production-ready emoji panel component
-          supporting emojis, GIFs, and stickers. It uses virtualized rendering for large datasets
-          to ensure optimal performance.
+          supporting emojis, GIFs, and stickers. It utilizes virtualized rendering for large datasets
+          to maintain optimal performance.
         </p>
         <ul className="list-disc list-inside space-y-2">
           <li>🚀 Virtualized rendering for large datasets</li>
@@ -55,11 +55,11 @@ const DocsPage = () => {
       <section className="mb-10">
         <h2 className="text-3xl font-semibold mb-4">🚀 Basic Usage</h2>
         <CodeBlock
-          code={`import { EmojiPanel } from 'emoji-select-panel'
+          code={`import { EmojiPanel } from 'emoji-select-panel';
 
 function ChatInput() {
   const handleEmojiSelect = (item) => {
-    console.log('Selected:', item.content || item.url)
+    console.log('Selected:', item.content || item.url);
   }
 
   return (
@@ -67,7 +67,7 @@ function ChatInput() {
       <textarea placeholder="Type a message..." />
       <EmojiPanel onSelect={handleEmojiSelect} />
     </div>
-  )
+  );
 }`}
         />
       </section>
@@ -88,9 +88,9 @@ function ChatInput() {
   trigger={<SmileIcon className="w-5 h-5 text-blue-500" />}
   onSelect={(item) => {
     if (item.type === 'emoji') {
-      console.log('Selected emoji:', item.content)
+      console.log('Selected emoji:', item.content);
     } else {
-      console.log('Selected media:', item.url)
+      console.log('Selected media:', item.url);
     }
   }}
 />`}
@@ -143,15 +143,15 @@ storageKey?: string`}
         <h2 className="text-3xl font-semibold mb-4">🌍 Custom API Fetching</h2>
         <CodeBlock
           code={`const fetchFromMyApi = async (type, category, query) => {
-  const res = await fetch(\`/api/media?type=\${type}&category=\${category}&q=\${query}\`)
-  const data = await res.json()
+  const res = await fetch(\`/api/media?type=\${type}&category=\${category}&q=\${query}\`);
+  const data = await res.json();
   return data.map(item => ({
     id: item.id,
     content: item.type === 'emoji' ? item.unicode : undefined,
     url: item.type !== 'emoji' ? item.url : undefined,
     type: item.type,
     category: item.category
-  }))
+  }));
 }
 
 <EmojiPanel fetchItems={fetchFromMyApi} />`}
@@ -166,8 +166,9 @@ storageKey?: string`}
           <li>Search input is debounced automatically</li>
         </ul>
       </section>
+      <CallToAction />
     </div>
-  )
-}
+  );
+};
 
-export default DocsPage
+export default DocsPage;
