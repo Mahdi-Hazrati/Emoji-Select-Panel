@@ -1,7 +1,6 @@
 {
   "name": "emoji-select-panel",
   "version": "1.0.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -25,5 +24,26 @@
     "postcss": "^8",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
-  }
+  },
+  "description": "A high-performance emoji, GIF, and sticker panel built for modern UIs. Fully customizable, blazing fast, and accessible — ready for your chat apps, editors, and more. ",
+  "main": "components/emoji-panel.tsx",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mahdi-Hazrati/Emoji-Select-Panel.git"
+  },
+  "keywords": [
+    "emoji-select-panel",
+    "emoji",
+    "emoji-panel",
+    "emoji-select"
+  ],
+  "author": "Mahdi Hazrati <mahdi@nextproduction.dev>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mahdi-Hazrati/Emoji-Select-Panel/issues"
+  },
+  "homepage": "https://mahdi.is-a.dev/Emoji-Select-Panel"
 }
