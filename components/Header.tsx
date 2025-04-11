@@ -3,7 +3,7 @@ import { Home, BookOpen } from "lucide-react";
 
 export default function Header() {
   return (
-    <header className="w-full bg-white bg-opacity-50 backdrop-blur-lg shadow-md py-4 z-50">
+    <header className="w-full bg-white bg-opacity-50 backdrop-blur-lg  py-4 z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 flex-wrap gap-2">
         <h1 className="text-2xl font-semibold text-gray-900 flex items-center gap-2">
           <span role="img" aria-label="emoji select" className="text-3xl">😊</span> 
